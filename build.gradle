@@ -29,6 +29,15 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootRun {
+	systemProperty "jasypt.encryptor.password", findProperty("jasypt.encryptor.password")
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
+}
+task runMain(type: JavaExec) {
+	classpath sourceSets.main.runtimeClasspath
+	main = "de.crypt.CryptApplication"
+	args "arg1", "arg2"
 }
