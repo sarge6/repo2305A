@@ -28,8 +28,6 @@ public class CryptApplication {
 	public static String cryptCredentials(String key, String text, boolean decrypt){
 		BasicTextEncryptor bte = new BasicTextEncryptor();
 		BasicCryptUtil basicCryptUtil1 = new BasicCryptUtil(bte, key);
-		basicCryptUtil1.setBasicTextEncryptor(bte);
-		basicCryptUtil1.setPassword(key);
 		String resulttext = "";
 		String resulttext_rev = "";
 		if(!decrypt){

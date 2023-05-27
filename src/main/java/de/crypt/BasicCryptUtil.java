@@ -12,7 +12,7 @@ public class BasicCryptUtil {
     public BasicCryptUtil(){}
     public BasicCryptUtil(BasicTextEncryptor basicTextEncryptor, String password){
         this.basicTextEncryptor = basicTextEncryptor;
-        if(password.isBlank()){
+        if((password == null)||(password.isBlank())){
             this.basicTextEncryptor.setPassword(PASSWORD_DEFAULT);
         }else{
             this.basicTextEncryptor.setPassword(password);
