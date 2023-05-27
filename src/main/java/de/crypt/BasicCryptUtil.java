@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class BasicCryptUtil {
     private static final String PASSWORD_DEFAULT = "secret";
     public BasicTextEncryptor basicTextEncryptor; // = new BasicTextEncryptor();
-    public String password;
     public BasicCryptUtil(){}
     public BasicCryptUtil(BasicTextEncryptor basicTextEncryptor, String password){
         this.basicTextEncryptor = basicTextEncryptor;
